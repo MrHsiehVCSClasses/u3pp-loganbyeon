@@ -2,27 +2,6 @@ package u3pp;
 
 public class PalindromeTester {
 
-    // //Takes a word
-    // String str = "racecar", reverseStr = "";
-        
-    // //Getting the length of str
-    // int strLength = str.length();
-
-    // //Reversing str
-    // for(int i = (strLength - 1); i >= 0; i--){
-    //     reverseStr = reverseStr + str.charAt(i);
-    // }
-
-    // //If str is equal to the reversed str...
-    // if(str.toLowerCase().equals(reverseStr.toLowerCase())){
-    //     //The code will say str is a paindrome
-    //     System.out.println(str + " is a Palindrome.");
-    // }
-    // else{
-    //     //or that it's not a palindrome
-    //     System.out.println(str + " is not a Palindrome.");
-    // }
-
     /**
      * Tests whether a string is a palindrome. Case insensitive. 
      * @param s  the string to test
@@ -35,11 +14,13 @@ public class PalindromeTester {
             //original str and the reversed str must be the same
             //or else it is not a palindrome
             if (s.charAt(i) != s.charAt(j)){
+                System.out.print("Is the word a Palindrome? ");
                 return false;
             }
             i++;
             j--;
         }
+        System.out.print("Is the word a Palindrome? ");
         return true;
     }
 }
