@@ -8,19 +8,17 @@ public class PalindromeTester {
      * @return true if the string is a palindrome
      */
     public static boolean isPalindrome(String s) {
-        int i = 0, j = s.length() - 1;
-        while(i<j){
-            //The character at the opposite index of the 
-            //original str and the reversed str must be the same
-            //or else it is not a palindrome
-            if (s.charAt(i) != s.charAt(j)){
-                System.out.print("Is the word a Palindrome? ");
+        // change all letters to lower case for words like rAceCaR
+        s = s.toLowerCase();
+        
+        int half = s.length() / 2;
+
+        for(int i = 0; i < half; i++){
+            if(s.charAt(i) != s.charAt(s.length() - i - 1)){
+            // need -1 because i starts at 0 and the lenght it +1 of the index
                 return false;
             }
-            i++;
-            j--;
         }
-        System.out.print("Is the word a Palindrome? ");
         return true;
     }
 }
